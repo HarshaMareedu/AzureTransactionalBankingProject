@@ -1,0 +1,15 @@
+{
+	"name": "AzureDataFactoryTransactional",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Enabled",
+			"editable": true
+		}
+	},
+	"location": "uksouth",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "dbd08064-6f1f-4ec5-98ca-2710638b4c6a",
+		"tenantId": "2f2f3a23-9540-4b4a-904f-50d90b72ba5d"
+	}
+}

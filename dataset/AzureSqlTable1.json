@@ -1,0 +1,94 @@
+{
+	"name": "AzureSqlTable1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"table_name": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "customer_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "current_age",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "retirement_age",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "birth_year",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "birth_month",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "gender",
+				"type": "varchar"
+			},
+			{
+				"name": "address",
+				"type": "varchar"
+			},
+			{
+				"name": "latitude",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "longitude",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "per_capita_income",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "yearly_income",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "total_debt",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "credit_score",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "num_credit_cards",
+				"type": "int",
+				"precision": 10
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": {
+				"value": "@dataset().table_name",
+				"type": "Expression"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

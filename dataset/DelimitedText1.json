@@ -1,0 +1,68 @@
+{
+	"name": "DelimitedText1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStoragetransactionalproject",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "raw-data"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "card_id",
+				"type": "String"
+			},
+			{
+				"name": "customer_id",
+				"type": "String"
+			},
+			{
+				"name": "card_brand",
+				"type": "String"
+			},
+			{
+				"name": "card_type",
+				"type": "String"
+			},
+			{
+				"name": "expires",
+				"type": "String"
+			},
+			{
+				"name": "has_chip",
+				"type": "String"
+			},
+			{
+				"name": "num_cards_issued",
+				"type": "String"
+			},
+			{
+				"name": "credit_limit",
+				"type": "String"
+			},
+			{
+				"name": "acct_open_date",
+				"type": "String"
+			},
+			{
+				"name": "year_pin_last_changed",
+				"type": "String"
+			},
+			{
+				"name": "card_on_dark_web",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
