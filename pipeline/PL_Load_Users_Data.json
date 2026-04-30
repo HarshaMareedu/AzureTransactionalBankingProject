@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('Get Metadata1').output.childItems",
+						"value": "@activity('Lookup1').output.value",
 						"type": "Expression"
 					},
 					"activities": [
@@ -120,7 +120,7 @@
 										"table_name": "file_table_mapping"
 									}
 								},
-								"firstRowOnly": true
+								"firstRowOnly": false
 							}
 						},
 						{
@@ -232,6 +232,25 @@
 							"linkedServiceName": {
 								"referenceName": "AzureSqlDatabase1",
 								"type": "LinkedServiceReference"
+							}
+						},
+						{
+							"name": "If Condition1",
+							"type": "IfCondition",
+							"dependsOn": [
+								{
+									"activity": "Stored procedure1",
+									"dependencyConditions": [
+										"Succeeded"
+									]
+								}
+							],
+							"userProperties": [],
+							"typeProperties": {
+								"expression": {
+									"value": "@equals(item().load_type, 'INCREMENTAL')",
+									"type": "Expression"
+								}
 							}
 						}
 					]

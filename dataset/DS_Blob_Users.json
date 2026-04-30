@@ -8,6 +8,9 @@
 		"parameters": {
 			"file_name": {
 				"type": "string"
+			},
+			"folder_path": {
+				"type": "string"
 			}
 		},
 		"annotations": [],
@@ -19,7 +22,10 @@
 					"value": "@dataset().file_name",
 					"type": "Expression"
 				},
-				"container": "raw-data"
+				"container": {
+					"value": "@dataset().folder_path",
+					"type": "Expression"
+				}
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
