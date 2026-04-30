@@ -22,8 +22,12 @@
 					"value": "@dataset().file_name",
 					"type": "Expression"
 				},
-				"container": {
+				"folderPath": {
 					"value": "@dataset().folder_path",
+					"type": "Expression"
+				},
+				"container": {
+					"value": "raw-data",
 					"type": "Expression"
 				}
 			},
