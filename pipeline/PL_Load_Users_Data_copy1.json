@@ -224,9 +224,16 @@
 										"typeProperties": {
 											"storedProcedureName": "[dbo].[update_watermark]",
 											"storedProcedureParameters": {
-												"file_name": {
+												"table_name": {
 													"value": {
-														"value": "@item().file_name",
+														"value": "@item().target_table",
+														"type": "Expression"
+													},
+													"type": "String"
+												},
+												"last_load_value": {
+													"value": {
+														"value": "@formatDateTime(utcNow(),\n       'yyyy-MM-ddTHH:mm:ss')",
 														"type": "Expression"
 													},
 													"type": "String"
